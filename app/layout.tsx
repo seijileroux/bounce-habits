@@ -10,12 +10,12 @@ const geist = Geist({
 const delius = Delius({
   variable: "--font-delius",
   subsets: ["latin"],
-  weight: "400"
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
   title: "Bounce Habits",
-  description: "Because you always get back up!",
+  description: "Because you always bounce back up!",
 };
 
 export default function RootLayout({
@@ -25,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${delius.variable} ${geist.variable} antialiased`}
-      >
+      <body className={`${delius.variable} ${geist.variable} antialiased`}>
         {children}
       </body>
     </html>

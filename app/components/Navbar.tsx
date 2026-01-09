@@ -49,8 +49,7 @@ export default function Navbar() {
               Sign In
             </button>
             <button
-              style={backgroundColorObject}
-              className={`block sm:w-32 w-full rounded-lg px-9 py-3 text-sm 
+              className={`block sm:w-32 w-full border rounded-lg px-9 py-3 text-sm 
                       font-medium transition focus:outline-none hover:bg-[#4c4f69] hover:text-[#eff1f5] border-[#4c4f69] text-[#4c4f69]`}
               type="button"
             >
