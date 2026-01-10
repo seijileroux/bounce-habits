@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+
 import AppIcon from "@/app/svg/AppIcon";
+import { useAuth } from "@clerk/nextjs";
+import Link from "next/link";
 
 export default function Navbar() {
+  const { userId } = useAuth();
   const defaultWhiteColor = "#eff1f5";
   const defaultTextColor = "#4c4f69";
   const defaultBgColor = "#dc8a78";
@@ -39,22 +43,40 @@ export default function Navbar() {
           </div>
           {/*  */}
           {/* The buttons */}
-          <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
-            <button
-              style={backgroundColorObject}
-              className={`block sm:w-32 w-full rounded-lg px-9 py-3 text-sm 
+          <div>
+            {userId ? (
+              <Link href={"/dashboard"}>
+                <button
+                  style={backgroundColorObject}
+                  className={`block rounded-lg px-9 py-3 text-sm font-medium text-white transition`}
+                  type="button"
+                >
+                  Dashboard
+                </button>
+              </Link>
+            ) : (
+              <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
+                <Link href={"/sign-in"}>
+                  <button
+                    style={backgroundColorObject}
+                    className={`block sm:w-32 w-full rounded-lg px-9 py-3 text-sm 
                       font-medium transition focus:outline-none hover:bg-[#4c4f69] hover:text-[#eff1f5] border-[#4c4f69] text-[#4c4f69]`}
-              type="button"
-            >
-              Sign In
-            </button>
-            <button
-              className={`block sm:w-32 w-full border rounded-lg px-9 py-3 text-sm 
+                    type="button"
+                  >
+                    Sign In
+                  </button>
+                </Link>
+                <Link href={"/sign-up"}>
+                  <button
+                    className={`block sm:w-32 w-full border rounded-lg px-9 py-3 text-sm 
                       font-medium transition focus:outline-none hover:bg-[#4c4f69] hover:text-[#eff1f5] border-[#4c4f69] text-[#4c4f69]`}
-              type="button"
-            >
-              Sign Up
-            </button>
+                    type="button"
+                  >
+                    Sign Up
+                  </button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
