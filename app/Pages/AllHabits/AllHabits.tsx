@@ -6,7 +6,7 @@ import HabitsCompleted from "./components/HabitsCompleted";
 export default function AllHabits() {
   return (
     <div className="w-full flex">
-      <div className="w-[80%] m-5">
+      <div className="w-[70%] m-5">
         <AllHabitsTopBar />
         <HabitsContainer />
         <HabitsCompleted />
