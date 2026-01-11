@@ -4,7 +4,7 @@ import LogoutSection from "@/app/components/SideBar/LogoutSection";
 
 export default function SideBar() {
   return (
-    <div className="border-r-2 h-screen p-10">
+    <div className="flex-grow p-10 flex flex-col bg-white min-h-screen ">
       <LogoAndName />
       <MenuSelection />
       <LogoutSection />

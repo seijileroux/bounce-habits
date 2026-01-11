@@ -1,7 +1,7 @@
-import React from "react";
 import AllHabitsRightSideBar from "./components/AllHabitsRightSideBar";
 import AllHabitsTopBar from "./components/AllHabitsTopBar";
 import HabitsContainer from "@/app/Pages/AllHabits/components/HabitsContainer";
+import HabitsCompleted from "./components/HabitsCompleted";
 
 export default function AllHabits() {
   return (
@@ -9,6 +9,7 @@ export default function AllHabits() {
       <div className="w-[80%] m-5">
         <AllHabitsTopBar />
         <HabitsContainer />
+        <HabitsCompleted />
       </div>
 
       <AllHabitsRightSideBar />
