@@ -1,8 +1,8 @@
 import { SignUp } from "@clerk/nextjs";
+import { defaultColor, defaultWhiteColor } from "@/colors";
 
 export default function SignUnPage() {
-  const defaultColor = "#dc8a78";
-  const gradientColor = `linear-gradient(to bottom, ${defaultColor}, #eff1f5)`;
+  const gradientColor = `linear-gradient(to bottom, ${defaultColor.default}, ${defaultWhiteColor})`;
   return (
     <div
       style={{ background: gradientColor }}

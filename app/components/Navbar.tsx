@@ -8,7 +8,7 @@ import { defaultColor } from "@/colors";
 export default function Navbar() {
   const { userId } = useAuth();
   const backgroundColorObject = {
-    backgroundColor: defaultColor,
+    backgroundColor: defaultColor.default,
   };
   return (
     <header>
