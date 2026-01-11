@@ -20,10 +20,13 @@
     "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
     "@mui/system": "^7.3.7",
+    "@mui/x-date-pickers": "^8.24.0",
+    "dayjs": "^1.11.19",
     "mongoose": "^9.1.2",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "recharts": "^3.6.0",
     "svix": "^1.84.1"
   },
   "devDependencies": {
